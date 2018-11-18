@@ -5,7 +5,7 @@ client.on("ready", () => {
 	var moment = require('moment')
 	console.log(`[${client.user.tag}]Zalogowano`)
 	setInterval(function(){
-		var hr = new Date().getHours() +2
+		var hr = new Date().getHours() +1
 		if(hr == 25) hr = 1
 		client.channels.get("474594757243306015").edit({name: `Data: ${moment.utc(new Date()).format('DD.MM.YYYY')}`})
   		client.channels.get("474594634371301406").edit({name: `Czas: ${hr}:${moment.utc(new Date()).format('mm:ss')}`})
